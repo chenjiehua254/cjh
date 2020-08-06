@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>信息与网络中心</title>
+    <style type="text/css">
+        <!--
+        /*整体样式设计*/
+        body {
+            margin: 0;
+            padding: 0;
+            font: 12px/1.6 Arial;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        a {
+            color: #999900;
+            text-decoration: none;
+        }
+
+        p {
+            text-indent: 2em;
+        }
+
+        /*页头部分*/
+
+        #header {
+
+            background: url(img/logo.png) no-repeat;
+
+            width: 768px;
+
+            height: 191px;
+
+            margin: 0 auto;
+
+            position: relative;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+
+        #header #topnav {
+            position: absolute;
+            top: 10px;
+            right: 40px;
+        }
+
+        #header #topnav li {
+            float: left;
+            padding: 4px 10px 2px;
+            margin: 0 4px;
+        }
+
+        /*内容部分*/
+
+        #content {
+            width: 768px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        #maincontent {
+            float: left;
+            width: 540px;
+        }
+
+        #sidebar {
+            float: right;
+            width: 207px;
+        }
+
+        /*页脚部分*/
+
+        #footer {
+
+            clear: both;
+
+            width: 768px;
+
+            height: 58px;
+
+            margin: 0 auto;
+
+            text-indent: 0;
+
+            text-align: center;
+
+            background: #ddf0f9 url(images/footer.png) repeat-x;
+        }
+
+        /*视觉设计--页头部分*/
+
+        #header h1 {
+
+
+            height: 46px;
+
+            width: 322px;
+
+            position: absolute;
+
+            top: 20px;
+
+            left: 160px;
+        }
+
+        #header h1 span {
+            display: none;
+        }
+
+        #header #nav {
+            position: absolute;
+            top: 140px;
+            left: 15px;
+            background: #4594d4;
+            height: 30px;
+            width: 768px;
+        }
+
+        #header #nav li {
+            float: left;
+        }
+
+        #header #nav li a {
+
+            display: block;
+
+            line-height: 27px;
+
+            padding: 0 0 0 14px;
+
+            margin-left: 10px;
+
+            text-align: center;
+        }
+
+        #header #nav li a span {
+
+            padding: 0 14px 0 0;
+            display: block;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+        }
+
+        #header #nav .current a {
+            background-position: 0 -27px;
+        }
+
+        #header #nav .current a span {
+            background-position: 100% -27px;
+        }
+
+        #header #nav .icon1 a {
+            background: url(images/menu_guide.png) no-repeat;
+            width: 64px;
+            height: 59px;
+            position: absolute;
+            top: -8px;
+            right: -334px;
+        }
+
+        #header #nav .icon1 a span {
+            display: none;
+        }
+
+        #header #nav .icon2 a {
+            background: url(images/menu_support.png) no-repeat;
+            width: 68px;
+            height: 59px;
+            position: absolute;
+            top: -8px;
+
+            right: -398px;
+        }
+
+        #header #nav .icon1 a span,
+        #header #nav .icon2 a span {
+            display: none;
+        }
+
+        /*视觉设计--左侧主要内容列*/
+
+        #content a img {
+            padding: 5px;
+            background-color: #FFFFFF;
+            border: 1px #deaf50 solid;
+        }
+
+        .imgLeft {
+            float: left;
+            margin-right: 12px;
+        }
+
+        .imgRight {
+            float: right;
+            margin-left: 12px;
+        }
+
+        .multiColumn li {
+            float: left;
+            width: 160px;
+            text-align: center;
+            margin: 0 10px;
+            display: inline;
+        }
+
+        .recom {
+            clear: both;
+        }
+
+        .recom h2 {
+            background: transparent url(images/rose.png) no-repeat left bottom;
+
+            padding: 20px 0 1px 26px;
+
+            color: #069;
+
+            font: bold 22px/24px "楷体_gb2312";
+
+            border-bottom: 1px solid #deaf50;
+        }
+
+        .multiColumn li p {
+            text-align: left;
+            margin: 0 0 10px 0;
+        }
+
+        .side {
+            background: transparent url(images/bottombox.png) no-repeat bottom;
+            margin-top: 20px;
+        }
+
+        .side div {
+            background: transparent url(images/topbox.png) no-repeat;
+            padding: 10px;
+        }
+
+        .side h2 {
+            color: #069;
+            font: bold 22px/24px "楷体_gb2312";
+            text-align: center;
+            margin: 0;
+        }
+
+        .search {
+            text-align: center;
+        }
+
+        .side form {
+            margin: px 0;
+        }
+
+        .side input {
+            border: 1px solid #069;
+            background-color: #fee;
+            margin: 5px 0;
+        }
+
+        .downbox li {
+            border-top: 1px solid #fff;
+            font: 14px "宋体";
+        }
+
+        .extxa h2 {
+            border-bottom: 1px solid #fff;
+        }
+
+        .downbox li a {
+
+            padding-left: 35px;
+
+            height: 25px;
+
+            line-height: 25px;
+
+            background: transparent url(images/bullet.gif) no-repeat 10px center;
+
+            color: #000;
+
+            display: block;
+        }
+
+        .downbox li a:hover {
+            background: #fee url(images/bullet2.gif) no-repeat 10px center;
+            color: #c63;
+        }
+
+        #content a:hover img {
+            background-color: #3d81b4;
+            border: 1px solid #3d81b4;
+        }
+
+        #content a:hover {
+            color: #c63;
+        }
+
+        /*解决IE6 bug*/
+        -->
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+    <div id="header">
+
+        <h1><span>信息与网络中心</span></h1>
+
+        <ul id="nav">
+
+            <li class="current"><a href="#"><span>首页</span></a></li>
+
+            <li><a href="index1.html"><span>学校简介</span></a></li>
+
+            <li><a href="#"><span>网络建设</span></a></li>
+
+            <li><a href="#"><span>政策法规</span></a></li>
+
+            <li class="icon1"><a href="#"><span>建站指南</span></a></li>
+
+            <li class="icon2"><a href="#"><span>技术支持</span></a></li>
+
+        </ul>
+
+    </div>
+
+
+
+    <div id="content">
+
+        <div id="maincontent">
+
+            <div class="recom">
+
+                <h2>最新动态</h2>
+
+                <div class="imgLeft">
+
+                    <a href="#"><img src="img/logo.jpg" /></a>
+
+                </div>
+                <li class="current"><a href="#"><span>继往开来，赓续辉煌，船政交通，未来可期！</span></a></li>
+
+                <li><a href="#"><span>我院实施“浪花计划”获央视报道</span></a></li>
+                <li><a href="#"><span>福建省人社厅洪长春厅长一行莅校考察</span></a></li>
+                <li><a href="#"><span>乘风破浪 向海发展 开拓退役军人就业新渠道</span></a></li>
+                <li class="icon1"><a href="#"><span>学院召开干部大会暨干部培训会议</span></a></li>
+                <li class="icon2"><a href="#"><span>喜报！我校2020年普通高校专升本考试获奖考生数居全省第一</span></a></li>
+                <li><a href="#"><span>福建省交通科研院有限公司杨龙清董事长一行莅校交流</span></a></li>
+                <li><a href="#"><span>福建省人社厅洪长春厅长一行莅校考察</span></a></li>
+                <li><a href="#"><span>乘风破浪 向海发展 开拓退役军人就业新渠道</span></a></li>
+            </div>
+
+
+
+            <div class="recom">
+
+                <h2>通知公告</h2>
+
+                <div class="imgRight">
+                    
+                <li><a href="#"><span>中共福建船政交通职业学院委员会关于省委巡视整改情况的通报</span></a></li>
+                <li><a href="#"><span>2020年公开招聘代理人员未招满的26个岗位参加笔试人员报名材料接收时间截止到2020年8月15日0点的通知</span></a></li>
+                <li><a href="#"><span>2020年福建船政交通职业学院公开招聘代理人员未招满的26个岗位放宽条件且原招聘方案终止的公告</span></a></li>
+                <li><a href="#"><span>2020年福建船政交通职业学院公开招聘代理人员 29岗位体检顺延递补公示及体检的通知</span></a></li>
+                <li><a href="#"><span></span>2020年福建船政交通职业学院驾驶员招聘拟聘人选公示</span></a></li>
+                </div>
+            </div>
+
+
+
+            <div class="recom multiColumn">
+
+                <h2></h2>
+
+                <ul>
+
+                    <li><a href="#"><img src="img/pic01.png.jpg" width="500px" height="163px" /></a>
+
+                        <p>热烈祝贺福建船政交通职业学院成功入选中国特色高水平高职学校建设单位</p>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+        <!--maincontent end-->
+
+
+
+        <div id="sidebar">
+
+            <div class="side search">
+
+                <div>
+
+                
+
+                </div>
+
+            </div>
+
+            <div class="side downbox">
+
+                <div>
+
+                    <h2>校园指南</h2>
+
+                    <ul>
+
+                        <li><a href="#">信息门户</a></li>
+
+                        <li><a href="#">科研管理系统</a></li>
+
+                        <li><a href="#">精品课程网</a></li>
+
+                        <li><a href="#">教务管理系统</a></li>
+
+                        <li><a href="#">校长信箱</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="side extxa">
+
+                <div>
+
+                    <h2>特别提示</h2>
+
+                    <p>请使用了认证软件上网的用户保管好帐户密码</p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!--sidebar end-->
+
+    </div>
+
+
+
+    <div id="footer">
+
+        <p><a href="#">网站首页</a> | <a href="#">邮箱登录</a> | <a href="#">加入收藏</a> | <a href="#">留言薄</a></p>
+
+    </div>
+
+</body>
+
+</html>

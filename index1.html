@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <!--meta 单标签 用来引入或声明一些内容-->
+
+    <meta charset="UTF-8">
+
+    <!--title 标题标签-->
+
+    <title>学校简介</title>
+
+    <style>
+
+      
+
+        nav{
+
+            width: 100%;
+
+            height: 64px;
+
+            /*定位方式: 固定位置*/
+
+            position: fixed;
+
+            top: 0;
+
+            background-color: white;
+
+            z-index: 1000;
+
+        }
+
+        /*找到nav标签下 div标签后代选择器 ，可以找到nav下的所有的div标签*/
+
+        nav div{
+
+            width: 1000px;
+
+            height: 64px;
+
+            /*块元素居中*/
+
+            margin:0 auto;
+
+        }
+
+        #logo{
+
+            width: 216px;
+
+            /*相对定位,位置微调*/
+
+            position: relative;
+
+            top: 7px;
+
+            left: 15px;
+
+        }
+
+        ul{
+
+            float: right;
+
+            margin: 0;
+
+            /*左内边距设为零*/
+
+            padding-left: 0;
+
+        }
+
+        li{
+
+            float: left;
+
+            /*设置列表项的前缀为none*/
+
+            list-style: none;
+
+            margin-right: 30px;
+
+        }
+
+        li a{
+
+            line-height: 64px;
+
+            /*去除超链接下划线*/
+
+            text-decoration: none;
+
+            color: black;
+
+        }
+
+        li a:hover{
+
+            color: brown;
+
+        }
+
+        #header{
+
+            /*图片宽度设为100%*/
+
+            width: 100%;
+
+        }
+
+        main {
+
+            width: 1000px;
+
+            margin:0 auto;
+
+        }
+
+        /*只找到父子关系的标签找到section下img标签，不会找到孙级标签*/
+
+        section > img {
+
+            width: 1000px;
+
+        }
+
+        p {
+
+            color: brown;
+
+            /*文本首行缩进2个字符*/
+
+            text-indent: 2em;
+
+        }
+
+        h2 {
+
+            color: brown;
+
+        }
+
+        #myclassmate {
+
+            width: 1000px;
+
+            height: 630px;
+
+            background-image: url('personage/classmates.jpg');
+
+            background-size: 1000px 630px;
+
+            /*relative 相对的 相对定位 */
+
+            /*1. 相对自己原来的位置做位置的微调
+
+            2.让该标签下的子标签做绝对定位时，以该标签为参考物调整，而不再是以浏览器边框为参考物*/
+
+            position: relative;
+
+        }
+
+        #myclassmate img{
+
+            border:2px white solid;
+
+            border-radius: 50%;
+
+            /*absolute1.绝对定位的元素会被浮起来，原来的位置会被后面的元素侵占*/
+
+            position: absolute;
+
+        }
+
+        /*找到div下的第1个子标签*/
+
+        #myclassmate img:nth-child(1){
+
+            width: 200px;
+
+            top: 100px;
+
+            left: 100px;
+
+        }
+
+        /*找到div下的第2个子标签*/
+
+        #myclassmate img:nth-child(2){
+
+            width: 270px;
+
+            top: 260px;
+
+            left: 360px;
+
+        }
+
+        /*找到div下的第3个子标签*/
+
+        #myclassmate img:nth-child(3){
+
+            width: 230px;
+
+            top: 100px;
+
+            right: 60px;
+
+        }
+        .top{
+    /* 设置宽度高度背景颜色 */
+    height: 50px; /*高度改为自动高度*/
+    width:100%;
+    margin-left: 0;
+    background:rgb(45, 139, 226);
+    position: fixed; /*固定在顶部*/
+    top: 0;/*离顶部的距离为0*/
+    margin-bottom: 5px;
+}
+.top ul{
+    /* 清除ul标签的默认样式 */
+    width: 796px;/*宽度也改为自动*/
+    list-style-type: none;
+    white-space:nowrap;
+    overflow: hidden;
+    margin-left: 5%;
+    /* margin-top: 0;          */
+    padding: 0;
+
+}
+.top li {
+    float:left; /* 使li内容横向浮动，即横向排列  */
+    margin-right:2%;  /* 两个li之间的距离*/
+    position: relative;
+    overflow: hidden;
+}
+
+.top li a{
+   /* 设置链接内容显示的格式*/
+    display: block; /* 把链接显示为块元素可使整个链接区域可点击 */
+    color:white;
+    text-align: center;
+    padding: 3px;
+    overflow: hidden;
+    text-decoration: none; /* 去除下划线 */
+    
+}
+.top li a:hover{
+    /* 鼠标选中时背景变为黑色 */
+    background-color:rgb(105, 180, 241);
+}
+.top ul li ul{
+    /* 设置二级菜单 */
+    margin-left: -0.2px;
+    background:rgb(84, 164, 230);
+    position: relative;
+    display: none; /* 默认隐藏二级菜单的内容 */
+
+}
+.top ul li ul li{
+    /* 二级菜单li内容的显示 */
+    
+    float:none;
+    text-align: center;
+}
+.top ul li:hover ul{
+    /* 鼠标选中二级菜单内容时 */
+    display: block;
+}
+body{
+    margin: 0;
+   font-family: 楷体;
+
+}
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <!--navigation 导航 标记网页中的导航条 块元素-->
+    <div class="top">
+                 <ul>
+         <li><a href="#">首页</a></li>
+         <li><a href="#">学校介绍</a></li>
+         <li><a href="#">院系设置</a></li>
+         <li><a href="#">党群机构</a></li>
+         <li><a href="#">管理机构</a></li>
+         <li><a href="#">招生</a></li>
+         <li><a href="#">党群机构</a></li>
+ </div>
+    <main>
+
+        <section id="myschool">
+
+            <h2 align="center" >福建船政交通职业学院</h2>
+
+            <img src="img/img01.jpg" alt="lzu.jpg">
+            <h1 style="font-size: 35px;">福建船政交通职业学院</h3>
+            <h4>Fujian Chuanzheng Communications College</h4>
+            <p>福建船政交通职业学院，座落在福建省福州市仓山区，是福建省唯一一所经教育部批准成立的省属公办高等职业院校，
+                是全国首批28所国家示范性高等职业院校之一第二批国家现代学徒制试点单位。</p>
+            <p>学院占地面积600多亩，设有航海技术系、轮机工程系、汽车运用工程系等14个教学单位。
+                 开设了涵盖当今公路、海运等领域技术与管理专业及新兴的经济社会建设急需的63个专业，在校生13000多人。</p>
+            <p>学院其溯源最早的前身校为创办于1866年的中国近代官办第一所高等实业学堂——福建船政学堂，
+                曾培养出如严复、詹天佑、邓世昌、陈季同、萨镇冰等众多的仁人志士和民族英雄。
+                2019年12月，被教育部、财政部列入第三类高水平学校建设单位（C档）。</p>
+                </section>
+
+    </main>
+
+    <hr>
+ 
+
+</body>
+
+</html>
